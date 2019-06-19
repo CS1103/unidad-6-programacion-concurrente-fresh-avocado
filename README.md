@@ -1,3 +1,5 @@
-Programación Concurrente
+Integrantes:
 
-(Ver detalles en PDF)
+Benjamin Diaz
+Rodrigo Cespedes
+Gabriel Spranger
