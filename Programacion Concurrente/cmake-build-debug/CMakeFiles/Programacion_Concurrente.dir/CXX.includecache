@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gabrielspranger/Desktop/POO II/Programacion Concurrente/MatrizAsincrona.h
+thread
+-
+iostream
+-
+random
+-
+
+/Users/gabrielspranger/Desktop/POO II/Programacion Concurrente/MatrizSincrona.h
+iostream
+-
+random
+-
+
+/Users/gabrielspranger/Desktop/POO II/Programacion Concurrente/main.cpp
+iostream
+-
+random
+-
+MatrizSincrona.h
+/Users/gabrielspranger/Desktop/POO II/Programacion Concurrente/MatrizSincrona.h
+MatrizAsincrona.h
+/Users/gabrielspranger/Desktop/POO II/Programacion Concurrente/MatrizAsincrona.h
+
