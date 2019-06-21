@@ -17,16 +17,16 @@ class MatrizSincrona {
 public:
     T** matriz;
 
-    MatrizSincrona(int filas1, int columnas1):filas{filas1}, columnas{columnas1} {
+    MatrizSincrona(int filas1, int columnas1): filas{filas1}, columnas{columnas1} {
         matriz = new T* [filas1]();
-        for (int i = 0; i < columnas1; ++i) {
-            matriz[i] = new T [columnas1]();
+        for (int i = 0; i < filas1; ++i) {
+            matriz[i] = new T [filas1]();
         }
     }
 
-    MatrizSincrona(int filas1, int columnas1, random_device rd):filas{filas1}, columnas{columnas1} {
+    MatrizSincrona(int filas1, int columnas1, random_device rd): filas{filas1}, columnas{columnas1} {
         matriz = new T* [filas1];
-        for (int i = 0; i < columnas1; ++i) {
+        for (int i = 0; i < filas1; ++i) {
             matriz[i] = new T [columnas1];
         }
         for (int j = 0; j < filas1; ++j) {
@@ -36,11 +36,11 @@ public:
         }
     }
 
-    void llenar(unsigned int i, unsigned int j, T item) {
+    void llenar(int i, int j, T item) {
         matriz[i][j] = item;
     }
 
-    auto operator*(MatrizSincrona& m) {
+    MatrizSincrona operator*(MatrizSincrona& m) {
         if (columnas == m.get_filas()) {
             MatrizSincrona<T> matrizSincrona(filas, m.get_columnas());
             for (int i = 0; i < filas; ++i) {
@@ -52,7 +52,7 @@ public:
             }
             return matrizSincrona;
         } else {
-            cout << "No se pueden multiplicar las matrices." << endl;
+            throw string("ERROR en sincrona: ¡El numero de columnas de la 1era matriz debe ser igual al numero de filas de la 2da matriz!");
         }
     }
 
@@ -72,6 +72,12 @@ public:
             cout << endl;
         }
     }
+
+//    ~MatrizSincrona() {
+//        for (int i = 0; i < filas; ++i)
+//            delete [] matriz[i];
+//        delete [] matriz;
+//    }
 };
 
 #endif //PROGRAMACION_CONCURRENTE_MATRIZSINCRONA_H

@@ -25,6 +25,8 @@ iostream
 -
 random
 -
+chrono
+-
 MatrizSincrona.h
 /Users/gabrielspranger/Desktop/POO II/Programacion Concurrente/MatrizSincrona.h
 MatrizAsincrona.h
