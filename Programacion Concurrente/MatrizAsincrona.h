@@ -9,7 +9,7 @@
 #include <iostream>
 #include <random>
 
-const int NUM_HILOS = 512;
+const int NUM_HILOS = 1;
 
 using namespace std;
 

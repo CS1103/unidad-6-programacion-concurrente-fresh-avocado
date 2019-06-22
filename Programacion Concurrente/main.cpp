@@ -1,9 +1,16 @@
 #include <iostream>
 #include <random>
 #include <chrono>
+#include <cassert>
 
 #include "MatrizSincrona.h"
 #include "MatrizAsincrona.h"
+
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
+
+#ifndef CATCH_CONFIG_MAIN
+
 
 using namespace std;
 using namespace std::chrono;
@@ -86,3 +93,5 @@ int main() {
 
     return 0;
 }
+
+#endif
